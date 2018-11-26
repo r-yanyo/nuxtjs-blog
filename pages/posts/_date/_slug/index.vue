@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="article">
     <h1>{{ title }}</h1>
     <div class="post-meta">
       <time>{{ params.date }}</time>
@@ -45,5 +45,9 @@ export default {
   color: #888;
   margin-bottom: 2.4rem;
   text-align: right;
+}
+.article {
+  margin: 16px;
+  line-height: 1.9;
 }
 </style>

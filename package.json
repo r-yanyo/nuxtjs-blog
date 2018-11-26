@@ -5,10 +5,10 @@
   "author": "r-yanyo",
   "private": true,
   "scripts": {
-    "dev": "nuxt --spa",
-    "build": "nuxt build --spa",
-    "start": "nuxt start --spa",
-    "generate": "nuxt generate",
+    "dev": "npm run processmd && PORT=8881 nuxt --spa",
+    "build": "npm run processmd && nuxt build --spa",
+    "start": "npm run processmd && nuxt start --spa",
+    "generate": "npm run processmd && nuxt generate",
     "processmd": "processmd 'content/markdown/*.md' --preview 60 --stdout --outputDir content/json/ > content/json/summary.json"
   },
   "dependencies": {

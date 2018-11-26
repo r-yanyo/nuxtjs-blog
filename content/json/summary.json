@@ -1,48 +1,22 @@
 {
   "fileMap": {
-    "content/json/2017-11-17-create-blog-Nextjs.json": {
-      "title": "Next.jsでブログを作った。",
-      "date": "2017年11月17日",
+    "content/json/2018-11-27-create-blog-Nuxtjs.json": {
+      "title": "Nuxt.jsでブログを作り直した。",
+      "date": "2018年11月27日",
       "tags": [
         "JavaScript",
-        "blog"
+        "blog",
+        "Nuxt.js"
       ],
+      "preview": "Nuxt.js でブログを作り直している途中。",
       "dir": "content/json",
-      "base": "2017-11-17-create-blog-Nextjs.json",
+      "base": "2018-11-27-create-blog-Nuxtjs.json",
       "ext": ".json",
-      "sourceBase": "2017-11-17-create-blog-Nextjs.md",
-      "sourceExt": ".md"
-    },
-    "content/json/2017-11-23-gzip-compression.json": {
-      "title": "ブログを最適化する",
-      "subtitle": "(1)gzipでコンテンツを圧縮する",
-      "date": "2017年11月23日",
-      "tags": [
-        "blog"
-      ],
-      "dir": "content/json",
-      "base": "2017-11-23-gzip-compression.json",
-      "ext": ".json",
-      "sourceBase": "2017-11-23-gzip-compression.md",
-      "sourceExt": ".md"
-    },
-    "content/json/2017-11-25-read-highperformance.json": {
-      "title": "「ハイパフォーマンスWebサイト」を読んだ",
-      "date": "2017年11月25日",
-      "tags": [
-        "JavaScript",
-        "読書"
-      ],
-      "dir": "content/json",
-      "base": "2017-11-25-read-highperformance.json",
-      "ext": ".json",
-      "sourceBase": "2017-11-25-read-highperformance.md",
+      "sourceBase": "2018-11-27-create-blog-Nuxtjs.md",
       "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "content/markdown/2017-11-17-create-blog-Nextjs.md",
-    "content/markdown/2017-11-23-gzip-compression.md",
-    "content/markdown/2017-11-25-read-highperformance.md"
+    "content/markdown/2018-11-27-create-blog-Nuxtjs.md"
   ]
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-item v-bind:title="title"></header-item>
+    <header-item></header-item>
     <nuxt/>
   </div>
 </template>
@@ -18,8 +18,7 @@ export default {
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Arial','Roboto','YuGothic','Yu Gothic';
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
