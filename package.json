@@ -8,13 +8,15 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "processmd": "processmd 'content/markdown/*.md' --stdout --outputDir content/json/ > content/json/summary.json"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "processmd": "^4.4.0"
   }
 }
