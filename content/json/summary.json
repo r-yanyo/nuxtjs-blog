@@ -1,0 +1,48 @@
+{
+  "fileMap": {
+    "content/json/gzip-compression.json": {
+      "title": "ブログを最適化する",
+      "subtitle": "(1)gzipでコンテンツを圧縮する",
+      "date": "2017年11月23日",
+      "tags": [
+        "blog"
+      ],
+      "dir": "content/json",
+      "base": "gzip-compression.json",
+      "ext": ".json",
+      "sourceBase": "gzip-compression.md",
+      "sourceExt": ".md"
+    },
+    "content/json/create-blog-Nextjs.json": {
+      "title": "Next.jsでブログを作った。",
+      "date": "2017年11月17日",
+      "tags": [
+        "JavaScript",
+        "blog"
+      ],
+      "dir": "content/json",
+      "base": "create-blog-Nextjs.json",
+      "ext": ".json",
+      "sourceBase": "create-blog-Nextjs.md",
+      "sourceExt": ".md"
+    },
+    "content/json/read-highperformance.json": {
+      "title": "「ハイパフォーマンスWebサイト」を読んだ",
+      "date": "2017年11月25日",
+      "tags": [
+        "JavaScript",
+        "読書"
+      ],
+      "dir": "content/json",
+      "base": "read-highperformance.json",
+      "ext": ".json",
+      "sourceBase": "read-highperformance.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "content/markdown/create-blog-Nextjs.md",
+    "content/markdown/gzip-compression.md",
+    "content/markdown/read-highperformance.md"
+  ]
+}
