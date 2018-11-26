@@ -5,18 +5,22 @@
   "author": "r-yanyo",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt --spa",
+    "build": "nuxt build --spa",
+    "start": "nuxt start --spa",
     "generate": "nuxt generate",
     "processmd": "processmd 'content/markdown/*.md' --stdout --outputDir content/json/ > content/json/summary.json"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
+    "highlight.js": "^9.13.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "node": "^11.2.0",
+    "node-sass": "^4.10.0",
     "nodemon": "^1.11.0",
-    "processmd": "^4.4.0"
+    "processmd": "^4.4.0",
+    "sass-loader": "^7.1.0"
   }
 }
