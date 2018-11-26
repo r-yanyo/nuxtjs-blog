@@ -1,19 +1,6 @@
 {
   "fileMap": {
-    "content/json/gzip-compression.json": {
-      "title": "ブログを最適化する",
-      "subtitle": "(1)gzipでコンテンツを圧縮する",
-      "date": "2017年11月23日",
-      "tags": [
-        "blog"
-      ],
-      "dir": "content/json",
-      "base": "gzip-compression.json",
-      "ext": ".json",
-      "sourceBase": "gzip-compression.md",
-      "sourceExt": ".md"
-    },
-    "content/json/create-blog-Nextjs.json": {
+    "content/json/2017-11-17-create-blog-Nextjs.json": {
       "title": "Next.jsでブログを作った。",
       "date": "2017年11月17日",
       "tags": [
@@ -21,12 +8,25 @@
         "blog"
       ],
       "dir": "content/json",
-      "base": "create-blog-Nextjs.json",
+      "base": "2017-11-17-create-blog-Nextjs.json",
       "ext": ".json",
-      "sourceBase": "create-blog-Nextjs.md",
+      "sourceBase": "2017-11-17-create-blog-Nextjs.md",
       "sourceExt": ".md"
     },
-    "content/json/read-highperformance.json": {
+    "content/json/2017-11-23-gzip-compression.json": {
+      "title": "ブログを最適化する",
+      "subtitle": "(1)gzipでコンテンツを圧縮する",
+      "date": "2017年11月23日",
+      "tags": [
+        "blog"
+      ],
+      "dir": "content/json",
+      "base": "2017-11-23-gzip-compression.json",
+      "ext": ".json",
+      "sourceBase": "2017-11-23-gzip-compression.md",
+      "sourceExt": ".md"
+    },
+    "content/json/2017-11-25-read-highperformance.json": {
       "title": "「ハイパフォーマンスWebサイト」を読んだ",
       "date": "2017年11月25日",
       "tags": [
@@ -34,15 +34,15 @@
         "読書"
       ],
       "dir": "content/json",
-      "base": "read-highperformance.json",
+      "base": "2017-11-25-read-highperformance.json",
       "ext": ".json",
-      "sourceBase": "read-highperformance.md",
+      "sourceBase": "2017-11-25-read-highperformance.md",
       "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "content/markdown/create-blog-Nextjs.md",
-    "content/markdown/gzip-compression.md",
-    "content/markdown/read-highperformance.md"
+    "content/markdown/2017-11-17-create-blog-Nextjs.md",
+    "content/markdown/2017-11-23-gzip-compression.md",
+    "content/markdown/2017-11-25-read-highperformance.md"
   ]
 }
