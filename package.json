@@ -9,7 +9,7 @@
     "build": "nuxt build --spa",
     "start": "nuxt start --spa",
     "generate": "nuxt generate",
-    "processmd": "processmd 'content/markdown/*.md' --stdout --outputDir content/json/ > content/json/summary.json"
+    "processmd": "processmd 'content/markdown/*.md' --preview 60 --stdout --outputDir content/json/ > content/json/summary.json"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
