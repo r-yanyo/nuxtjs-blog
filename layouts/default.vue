@@ -1,8 +1,20 @@
 <template>
   <div>
+    <header-item v-bind:title="title"></header-item>
     <nuxt/>
   </div>
 </template>
+
+<script>
+import headerItem from "~/components/header-item"
+
+export default {
+  components: {
+    headerItem
+  }
+}
+</script>
+
 
 <style>
 html {

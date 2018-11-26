@@ -1,9 +1,19 @@
 <template>
-  <section class="container">
-    <ul>
-      <li v-for="content in contents" v-bind:key="content.base">{{ content.title }}</li>
-    </ul>
-  </section>
+  <div>
+    <section class="container">
+      <div class="index">
+        <div class="index-item" v-for="content in contents" v-bind:key="content.base">
+          <nuxt-link v-bind:to="content.base | link">{{ content.title }}</nuxt-link>
+          <div class="meta-info">
+            <time>{{content.date}}</time>
+            <ul class="tags">
+              <li class="tag" v-for="tag in content.tags" v-bind:key="tag">{{tag}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -14,11 +24,22 @@ export default {
     return{
       contents: fileMap
     }
-  }
+  },
+  filters: {
+    link(base) {
+      if (!base) return ''
+      base = base.replace(/\.json$/, '')
+      const split = base.split('-')
+      const date = base.split('-').slice(0,3).join('-')
+      const slug = base.split('-').slice(3,).join('-')
+      return `posts/${date}/${slug}`
+    }
+  },
+
 }
 </script>
 
-<style>
+<style lang="scss">
 
 .container {
   min-height: 100vh;
@@ -28,25 +49,20 @@ export default {
   text-align: center;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.index {
+  // display: flex;
+  .index-item{
+    .meta-info {
+      display: flex;
+    }
+    .tags{
+      display: flex;
+    }
+    .tag{
+      list-style: none;
+      margin-right: 8px;
+    }
+  }
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
