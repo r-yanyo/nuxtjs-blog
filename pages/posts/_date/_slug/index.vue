@@ -43,7 +43,6 @@ export default {
 .post-meta {
   font-size: 0.8em;
   color: #888;
-  margin-top: -1rem;
   margin-bottom: 2.4rem;
   text-align: right;
 }
