@@ -1,5 +1,14 @@
 const pkg = require("./package");
 
+import { sourceFileArray } from "./content/json/summary.json";
+
+const generateDynamicRoutes = callback => {
+  const routes = sourceFileArray.map(sourceFileName => {
+    return sourceFileNameToUrl(sourceFileName);
+  });
+  callback(null, routes);
+};
+
 module.exports = {
   mode: "spa",
 
@@ -44,5 +53,18 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  generate: {
+    routes: generateDynamicRoutes
   }
 };
+
+function sourceFileNametoUrl(soruceFileName) {
+  if (!base) return "";
+  base = base.replace(/\.json$/, "");
+  const split = base.split("-");
+  const date = split.slice(0, 3).join("-");
+  const slug = split.slice(3).join("-");
+  return `posts/${date}/${slug}`;
+}
