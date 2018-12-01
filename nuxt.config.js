@@ -5,6 +5,10 @@ import { sourceFileArray } from "./content/json/summary.json";
 const generateDynamicRoutes = callback => {
   const routes = sourceFileArray.map(sourceFileName => {
     if (!sourceFileName) return "";
+    sourceFileName = sourceFileName
+      .split("/")
+      .slice(2)
+      .join("/");
     sourceFileName = sourceFileName.replace(/\.md$/, "");
     const split = sourceFileName.split("-");
     const date = split.slice(0, 3).join("-");
