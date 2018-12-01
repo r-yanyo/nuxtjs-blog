@@ -1,14 +1,9 @@
 <template>
-  <div class="article">
-    <h1>{{ title }}</h1>
-    <div class="post-meta">
-      <time>{{ params.date }}</time>
-    </div>
-    <div v-html="bodyHtml"></div>
-  </div>
+  <article-items v-bind:contents="Array(content)"></article-items>
 </template>
 
 <script>
+import articleItems from '~/components/article-items';
 import { sourceFileArray } from '~/content/json/summary.json';
 
 export default {
@@ -16,11 +11,11 @@ export default {
     return sourceFileArray.includes(`content/markdown/${params.date}-${params.slug}.md`);
   },
   asyncData({ params }) {
-    return Object.assign({}, require(`~/content/json/${params.date}-${params.slug}.json`), { params });
+    return Object.assign({content: require(`~/content/json/${params.date}-${params.slug}.json`)}, params);
   },
   head() {
-    const title = `${this.title} - r-yanyo.com`;
-    const url = `https://r-yanyo.com/posts/${this.params.date}/${this.params.slug}/`;
+    const title = `${this.content.title} - r-yanyoのブログ`;
+    const url = `https://r-yanyo.com/posts/${this.date}/${this.slug}/`;
     return {
       title: title,
       meta: [
@@ -30,24 +25,16 @@ export default {
       link: [{ rel: 'canonical', href: url }],
     };
   },
+  components: {
+    articleItems
+  }
 };
 </script>
 
 <style>
-@import 'highlight.js/styles/github.css';
 
 </style>
 
 
 <style lang="scss" scoped>
-.post-meta {
-  font-size: 0.8em;
-  color: #888;
-  margin-bottom: 2.4rem;
-  text-align: right;
-}
-.article {
-  margin: 16px;
-  line-height: 1.9;
-}
 </style>

@@ -4,7 +4,12 @@ import { sourceFileArray } from "./content/json/summary.json";
 
 const generateDynamicRoutes = callback => {
   const routes = sourceFileArray.map(sourceFileName => {
-    return sourceFileNameToUrl(sourceFileName);
+    if (!sourceFileName) return "";
+    sourceFileName = sourceFileName.replace(/\.md$/, "");
+    const split = sourceFileName.split("-");
+    const date = split.slice(0, 3).join("-");
+    const slug = split.slice(3).join("-");
+    return `posts/${date}/${slug}`;
   });
   callback(null, routes);
 };
@@ -59,12 +64,3 @@ module.exports = {
     routes: generateDynamicRoutes
   }
 };
-
-function sourceFileNametoUrl(soruceFileName) {
-  if (!base) return "";
-  base = base.replace(/\.json$/, "");
-  const split = base.split("-");
-  const date = split.slice(0, 3).join("-");
-  const slug = split.slice(3).join("-");
-  return `posts/${date}/${slug}`;
-}

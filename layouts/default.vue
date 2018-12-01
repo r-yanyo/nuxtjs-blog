@@ -1,7 +1,9 @@
 <template>
   <div>
     <header-item></header-item>
-    <nuxt/>
+    <div class="container">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
@@ -21,8 +23,10 @@ export default {
 }
 </script>
 
-
-<style>
+<style lang="scss">
+html,body{
+  margin: 0;
+}
 html {
   font-family: 'Arial','Roboto','YuGothic','Yu Gothic';
   font-size: 16px;
@@ -33,40 +37,42 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+body {
+  background-color: #e8eaef;
+}
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
-  margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+p{
+  overflow-wrap: break-word;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+a:link{
+  color: #337ab7;
+  text-decoration: underline;
+}
+a:hover{
+  opacity: 0.5;
+}
+a:visited{
+  color: #337ab7;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.container {
+  width: 960px;
+  margin: auto;
+  padding: 32px 80px;
+  min-height: 100vh;
+}
+@media (max-width: 960px) { 
+  .container {
+    width: 100%;
+    padding: 32px 0;
+  }
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>
