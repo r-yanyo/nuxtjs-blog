@@ -1,11 +1,11 @@
 <template>
   <header>
     <h1 class="blog-title">r-yanyoのブログ</h1>
-    <nuxt-link to="profile">profile</nuxt-link>
+    <nuxt-link to="/profile">profile</nuxt-link>
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   header {
     width: 100%;
     margin: auto;

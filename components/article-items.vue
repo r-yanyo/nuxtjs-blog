@@ -40,6 +40,7 @@ export default {
   p {
     margin: 1.2rem 0;
     line-height: 1.6;
+    overflow-wrap: break-word;
   }
 }
 .content{

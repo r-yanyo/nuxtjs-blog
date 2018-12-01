@@ -1,7 +1,7 @@
 <template>
   <div id="content">
     <div class="wrapper">
-      <section class="content" id="top-content">
+      <section class="content-profile" id="top-content">
         <a href="https://twitter.com/r_yanyo" target="_blank" id="image-link">
           <img src="/images/ball.png" class="clickable">
         </a>
@@ -19,7 +19,7 @@
       </section>
     </div>
     <div class="wrapper wrapper-blue">
-      <section class="content" id="skills-content">
+      <section class="content-profile" id="skills-content">
         <div class="heading">
           <h2>SKILLS</h2>
         </div>
@@ -42,7 +42,7 @@
       </section>
     </div>
     <div class="wrapper">
-      <section class="content" id="about-content">
+      <section class="content-profile" id="about-content">
         <div class="heading">
           <h2>About Me</h2>
         </div>
@@ -53,7 +53,7 @@
       </section>
     </div>
     <div class="wrapper wrapper-blue">
-      <section class="content" id="work-content">
+      <section class="content-profile" id="work-content">
         <div class="heading">
           <h2>WORKS</h2>
         </div>
@@ -119,7 +119,7 @@ a, i{
   background-color: #4444ff;
   color: white;
 }
-.content{
+.content-profile{
   max-width: 600px;
   min-height: 450px;
   margin: 0 auto;
