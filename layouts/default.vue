@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import headerItem from "~/components/header-item"
+import headerItem from "~/components/header-item";
 
 export default {
   components: {
@@ -17,25 +17,23 @@ export default {
   head() {
     const title = `r-yanyo.com`;
     return {
-      title: title,
-    }
+      title: title
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-
 .container {
   width: 960px;
   margin: auto;
-  padding: 32px 80px;
+  padding: 0 80px;
   min-height: 100vh;
 }
-@media (max-width: 960px) { 
+@media (max-width: 960px) {
   .container {
     width: 100%;
-    padding: 32px 0;
+    padding: 0 0;
   }
 }
-
 </style>

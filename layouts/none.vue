@@ -1,12 +1,11 @@
 <template>
   <div>
-    <header-item></header-item>
     <nuxt/>
   </div>
 </template>
 
 <script>
-import headerItem from "~/components/header-item"
+import headerItem from "~/components/header-item";
 
 export default {
   components: {
@@ -15,8 +14,8 @@ export default {
   head() {
     const title = `r-yanyo.com`;
     return {
-      title: title,
-    }
+      title: title
+    };
   }
-}
+};
 </script>

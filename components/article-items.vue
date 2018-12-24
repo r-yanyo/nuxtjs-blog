@@ -2,14 +2,14 @@
   <div class="article">
     <div class="article-item" v-for="content in contents" v-bind:key="content.base">
       <div class="article-head">
+        <time class="date">{{content.date}}</time>
         <h1>
           <nuxt-link v-bind:to="content.base | link" class="article-title">{{ content.title }}</nuxt-link>
         </h1>
         <div class="meta-info">
-          <time class="date">{{content.date}}</time>
-          <ul class="tags">
+          <!-- <ul class="tags">
             <li class="tag" v-for="tag in content.tags" v-bind:key="tag">{{tag}}</li>
-          </ul>
+          </ul>-->
         </div>
       </div>
       <div class="content" v-html="content.bodyHtml"></div>
@@ -19,22 +19,22 @@
 
 <script>
 export default {
-  props: ['contents'],
+  props: ["contents"],
   filters: {
-  link(base) {
-    if (!base) return ''
-    base = base.replace(/\.json$/, '')
-    const split = base.split('-')
-    const date = split.slice(0,3).join('-')
-    const slug = split.slice(3,).join('-')
-    return `posts/${date}/${slug}`
+    link(base) {
+      if (!base) return "";
+      base = base.replace(/\.json$/, "");
+      const split = base.split("-");
+      const date = split.slice(0, 3).join("-");
+      const slug = split.slice(3).join("-");
+      return `posts/${date}/${slug}`;
+    }
   }
-  },
-}
+};
 </script>
 
 <style lang="scss">
-@import 'highlight.js/styles/github.css';
+@import "highlight.js/styles/github.css";
 
 .article {
   p {
@@ -43,9 +43,10 @@ export default {
     overflow-wrap: break-word;
   }
 }
-.content{
+.content {
   line-height: 1.8;
-  h1, h2{
+  h1,
+  h2 {
     margin: 24px 0;
     border-bottom: 1px solid #ddd;
   }
@@ -55,25 +56,26 @@ export default {
   h2 {
     font-size: 1.6rem;
   }
-  img{
+  img {
     max-width: 100%;
   }
-  iframe{
+  iframe {
     max-width: 100%;
   }
 }
-.article-item{
+.article-item {
   margin-bottom: 32px;
   background-color: white;
   padding: 30px;
 }
-.article-head{
+.article-head {
   margin-bottom: 24px;
 }
-a.article-title{
+a.article-title {
   font-size: 2rem;
   display: block;
   margin-bottom: 8px;
+  font-weight: bold;
   color: rgb(68, 62, 62);
   text-decoration: none;
 }
@@ -87,22 +89,22 @@ a.article-title{
 }
 .tags {
   display: flex;
-  .tag{
+  .tag {
     list-style: none;
-    &+.tag{
+    & + .tag {
       margin-left: 16px;
     }
   }
 }
 
-@media (max-width: 480px) { 
-  a.article-title{
+@media (max-width: 480px) {
+  a.article-title {
     font-size: 1.6rem;
   }
   .article-item {
     padding: 15px;
   }
-  .content{
+  .content {
     h1 {
       font-size: 1.4rem;
     }
@@ -113,12 +115,12 @@ a.article-title{
   .meta-info {
     flex-wrap: wrap;
   }
-  .tags{
+  .tags {
     padding-left: 0;
   }
 }
 
-pre{
+pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
@@ -139,6 +141,5 @@ blockquote {
   font-size: 17.5px;
   border-left: 5px solid #eee;
 }
-
 </style>
 

@@ -10,8 +10,8 @@
   "bodyHtml": "<p>Nuxt.js でブログを作り直している途中。</p>\n<p>Next.js から Nuxt.js へ。</p>\n<p>heroku から netlify へ。</p>\n",
   "preview": "Nuxt.js でブログを作り直している途中。\n\nNext.js から Nuxt.js へ。\n\nheroku から",
   "dir": "content/json",
-  "base": "2018-11-27-create-blog-Nuxtjs.json",
+  "base": "2018-11-27-create-blog-nuxtjs.json",
   "ext": ".json",
-  "sourceBase": "2018-11-27-create-blog-Nuxtjs.md",
+  "sourceBase": "2018-11-27-create-blog-nuxtjs.md",
   "sourceExt": ".md"
 }
