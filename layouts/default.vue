@@ -4,15 +4,18 @@
     <div class="container">
       <nuxt/>
     </div>
+    <footer-item></footer-item>
   </div>
 </template>
 
 <script>
 import headerItem from "~/components/header-item";
+import footerItem from "~/components/footer-item";
 
 export default {
   components: {
-    headerItem
+    headerItem,
+    footerItem
   },
   head() {
     const title = `r-yanyo.com`;

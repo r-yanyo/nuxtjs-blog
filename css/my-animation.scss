@@ -1,0 +1,25 @@
+@keyframes updown {
+  from {
+    transform: translateY(-10px) rotate(135deg);
+  }
+  to {
+    transform: translateY(10px) rotate(135deg);
+  }
+}
+@keyframes zoomhop {
+  35% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1.1, 1.1);
+  }
+  45% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  55% {
+    transform: scale(1, 1);
+  }
+}

@@ -2,7 +2,7 @@
   <header>
     <h1 class="blog-title">r-yanyoのブログ</h1>
     <nuxt-link to="/profile">
-      <img class="my-icon" src="images/ball.png" alt="アイコン画像">
+      <img class="my-icon clickable" src="images/ball.png" alt="アイコン画像">
     </nuxt-link>
     <!-- profile
     <nuxt-link to="/">aaa</nuxt-link>-->
@@ -17,7 +17,10 @@ header {
   text-align: center;
   padding: 24px;
 }
-.blog-title {
+.clickable {
+  display: inline-block;
+  transition: 0.2s linear;
+  animation: zoomhop 3s infinite linear 1s both;
 }
 .my-icon {
   width: 40%;

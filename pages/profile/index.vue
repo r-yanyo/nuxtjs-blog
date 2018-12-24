@@ -102,6 +102,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "css/my-animation.scss";
+
 a,
 i {
   color: #7777ff;
@@ -121,7 +123,7 @@ header {
   width: 100%;
   margin: auto;
   text-align: center;
-  padding: 24px;
+  padding: 24px 10px;
 }
 .wrapper {
   width: 100%;
@@ -205,31 +207,6 @@ header {
 #works p,
 a {
   display: block;
-}
-@keyframes updown {
-  from {
-    transform: translateY(-10px) rotate(135deg);
-  }
-  to {
-    transform: translateY(10px) rotate(135deg);
-  }
-}
-@keyframes zoomhop {
-  35% {
-    transform: scale(1, 1);
-  }
-  40% {
-    transform: scale(1.1, 1.1);
-  }
-  45% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  55% {
-    transform: scale(1, 1);
-  }
 }
 </style>
 
