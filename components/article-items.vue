@@ -13,6 +13,15 @@
         </div>
       </div>
       <div class="content" v-html="content.bodyHtml"></div>
+      <a
+        href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw"
+        class="twitter-hashtag-button"
+        data-size="default"
+        v-bind:data-url="content.base | url"
+        v-bind:data-text="content.title"
+        data-show-count="false"
+      >Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
 </template>
@@ -28,6 +37,14 @@ export default {
       const date = split.slice(0, 3).join("-");
       const slug = split.slice(3).join("-");
       return `/posts/${date}/${slug}/`;
+    },
+    url(base) {
+      if (!base) return "";
+      base = base.replace(/\.json$/, "");
+      const split = base.split("-");
+      const date = split.slice(0, 3).join("-");
+      const slug = split.slice(3).join("-");
+      return `https://r-yanyo.com/posts/${date}/${slug}/`;
     }
   }
 };
