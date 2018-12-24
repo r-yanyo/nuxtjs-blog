@@ -19,7 +19,7 @@ const generateDynamicRoutes = callback => {
 };
 
 module.exports = {
-  mode: "spa",
+  mode: "universal",
 
   /*
    ** Headers of the page
@@ -39,7 +39,9 @@ module.exports = {
         hid: "og:description",
         property: "og:description",
         content: "r-yanyoのブログです。"
-      }
+      },
+      // Twitter
+      { name: "twitter:card", content: "summary" }
     ],
     link: [{ rel: "icon", href: "/ball.png" }]
   },

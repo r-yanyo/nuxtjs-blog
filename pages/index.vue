@@ -30,10 +30,7 @@ export default {
     const url = `https://r-yanyo.com`;
     return {
       title: title,
-      meta: [
-        // Twitter
-        { name: "twitter:card", content: "summary" }
-      ],
+      meta: [],
       link: [{ rel: "canonical", href: url }]
     };
   },

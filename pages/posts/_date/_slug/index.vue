@@ -31,9 +31,7 @@ export default {
           hid: "og:description",
           property: "og:description",
           content: this.content.preview
-        },
-        // Twitter
-        { name: "twitter:card", content: "summary" }
+        }
       ],
       link: [{ rel: "canonical", href: url }]
     };
