@@ -1,8 +1,10 @@
 <template>
   <header>
-    <h1 class="blog-title">r-yanyoのブログ</h1>
+    <h1>
+      <nuxt-link to="/" class="blog-title">r-yanyoのブログ</nuxt-link>
+    </h1>
     <nuxt-link to="/profile">
-      <img class="my-icon clickable" src="images/ball.png" alt="アイコン画像">
+      <img class="my-icon clickable" src="/images/ball.png" alt="アイコン画像">
     </nuxt-link>
     <!-- profile
     <nuxt-link to="/">aaa</nuxt-link>-->
@@ -25,5 +27,9 @@ header {
 .my-icon {
   width: 40%;
   max-width: 100px;
+}
+.blog-title {
+  color: #443e3e;
+  text-decoration: none;
 }
 </style>

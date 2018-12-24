@@ -31,9 +31,8 @@ export default {
     return {
       title: title,
       meta: [
-        { hid: "og:url", property: "og:url", content: url },
-        { hid: "og:title", property: "og:title", content: title },
-        { hid: "og:type", property: "og:type", content: "article" }
+        // Twitter
+        { name: "twitter:card", content: "summary" }
       ],
       link: [{ rel: "canonical", href: url }]
     };

@@ -1,65 +1,5 @@
 {
   "fileMap": {
-    "content/json/2021-11-27-create-blog-nuxtjs.json": {
-      "title": "Nuxt.jsでブログを作り直した。",
-      "date": "2018年11月27日",
-      "tags": [
-        "JavaScript",
-        "blog",
-        "Nuxt.js"
-      ],
-      "preview": "Nuxt.js でブログを作り直している途中。\n\nNext.js から Nuxt.js へ。\n\nheroku から",
-      "dir": "content/json",
-      "base": "2021-11-27-create-blog-nuxtjs.json",
-      "ext": ".json",
-      "sourceBase": "2021-11-27-create-blog-nuxtjs.md",
-      "sourceExt": ".md"
-    },
-    "content/json/2020-11-27-create-blog-nuxtjs.json": {
-      "title": "Nuxt.jsでブログを作り直した。",
-      "date": "2018年11月27日",
-      "tags": [
-        "JavaScript",
-        "blog",
-        "Nuxt.js"
-      ],
-      "preview": "Nuxt.js でブログを作り直している途中。\n\nNext.js から Nuxt.js へ。\n\nheroku から",
-      "dir": "content/json",
-      "base": "2020-11-27-create-blog-nuxtjs.json",
-      "ext": ".json",
-      "sourceBase": "2020-11-27-create-blog-nuxtjs.md",
-      "sourceExt": ".md"
-    },
-    "content/json/2022-11-27-create-blog-nuxtjs.json": {
-      "title": "Nuxt.jsでブログを作り直した。",
-      "date": "2018年11月27日",
-      "tags": [
-        "JavaScript",
-        "blog",
-        "Nuxt.js"
-      ],
-      "preview": "Nuxt.js でブログを作り直している途中。\n\nNext.js から Nuxt.js へ。\n\nheroku から",
-      "dir": "content/json",
-      "base": "2022-11-27-create-blog-nuxtjs.json",
-      "ext": ".json",
-      "sourceBase": "2022-11-27-create-blog-nuxtjs.md",
-      "sourceExt": ".md"
-    },
-    "content/json/2019-11-27-create-blog-nuxtjs.json": {
-      "title": "Nuxt.jsでブログを作り直した。",
-      "date": "2018年11月27日",
-      "tags": [
-        "JavaScript",
-        "blog",
-        "Nuxt.js"
-      ],
-      "preview": "Nuxt.js でブログを作り直している途中。\n\nNext.js から Nuxt.js へ。\n\nheroku から",
-      "dir": "content/json",
-      "base": "2019-11-27-create-blog-nuxtjs.json",
-      "ext": ".json",
-      "sourceBase": "2019-11-27-create-blog-nuxtjs.md",
-      "sourceExt": ".md"
-    },
     "content/json/2018-11-27-create-blog-nuxtjs.json": {
       "title": "Nuxt.jsでブログを作り直した。",
       "date": "2018年11月27日",
@@ -74,29 +14,9 @@
       "ext": ".json",
       "sourceBase": "2018-11-27-create-blog-nuxtjs.md",
       "sourceExt": ".md"
-    },
-    "content/json/2023-11-27-create-blog-nuxtjs.json": {
-      "title": "Nuxt.jsでブログを作り直した。",
-      "date": "2018年11月27日",
-      "tags": [
-        "JavaScript",
-        "blog",
-        "Nuxt.js"
-      ],
-      "preview": "Nuxt.js でブログを作り直している途中。\n\nNext.js から Nuxt.js へ。\n\nheroku から",
-      "dir": "content/json",
-      "base": "2023-11-27-create-blog-nuxtjs.json",
-      "ext": ".json",
-      "sourceBase": "2023-11-27-create-blog-nuxtjs.md",
-      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "content/markdown/2018-11-27-create-blog-nuxtjs.md",
-    "content/markdown/2019-11-27-create-blog-nuxtjs.md",
-    "content/markdown/2020-11-27-create-blog-nuxtjs.md",
-    "content/markdown/2021-11-27-create-blog-nuxtjs.md",
-    "content/markdown/2022-11-27-create-blog-nuxtjs.md",
-    "content/markdown/2023-11-27-create-blog-nuxtjs.md"
+    "content/markdown/2018-11-27-create-blog-nuxtjs.md"
   ]
 }

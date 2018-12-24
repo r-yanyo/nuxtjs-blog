@@ -27,7 +27,7 @@ export default {
       const split = base.split("-");
       const date = split.slice(0, 3).join("-");
       const slug = split.slice(3).join("-");
-      return `posts/${date}/${slug}`;
+      return `/posts/${date}/${slug}/`;
     }
   }
 };
