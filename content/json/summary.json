@@ -14,9 +14,24 @@
       "ext": ".json",
       "sourceBase": "2018-11-27-create-blog-nuxtjs.md",
       "sourceExt": ".md"
+    },
+    "content/json/2019-4-30-css-battle.json": {
+      "title": "CSSの実装でポイントを競い合う「CSSBattle」をやってみた",
+      "date": "2019年4月30日",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "preview": "",
+      "dir": "content/json",
+      "base": "2019-4-30-css-battle.json",
+      "ext": ".json",
+      "sourceBase": "2019-4-30-css-battle.md",
+      "sourceExt": ".md"
     }
   },
   "sourceFileArray": [
-    "content/markdown/2018-11-27-create-blog-nuxtjs.md"
+    "content/markdown/2018-11-27-create-blog-nuxtjs.md",
+    "content/markdown/2019-4-30-css-battle.md"
   ]
 }
