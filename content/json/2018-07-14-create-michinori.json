@@ -1,0 +1,17 @@
+{
+  "title": "道のりというWebサービスをVue.js+Ruby on Railsで作った。",
+  "subtitle": null,
+  "date": "2018年07月14日",
+  "tags": [
+    "Vue.js",
+    "Ruby on Rails"
+  ],
+  "bodyContent": "[「道のり」](https://michinori.herokuapp.com/)というサービスを作りました。\nどういうサービスかというと、これまでの人生で努力してきた体験をシェアしようというものです。\n\n<center><img src=\"/images/michinori.png\"></center>\n\n実は[「storys」](https://storys.jp/)という似たサービスが既にあったんですね。\n\n作り終えた後にこのサービスを知ったので、やはり \b 世の中には同じようなアイデアを思いつく人はいるんだなと思いました（完成度は私のものとは全然違いますが）。\n\nアプリを作ったのはほぼ初めてなので、これからもどんどん作っていけたらいいなぁ。",
+  "bodyHtml": "<p><a href=\"https://michinori.herokuapp.com/\">「道のり」</a>というサービスを作りました。\nどういうサービスかというと、これまでの人生で努力してきた体験をシェアしようというものです。</p>\n<center><img src=\"/images/michinori.png\"></center>\n<p>実は<a href=\"https://storys.jp/\">「storys」</a>という似たサービスが既にあったんですね。</p>\n<p>作り終えた後にこのサービスを知ったので、やはり \b 世の中には同じようなアイデアを思いつく人はいるんだなと思いました（完成度は私のものとは全然違いますが）。</p>\n<p>アプリを作ったのはほぼ初めてなので、これからもどんどん作っていけたらいいなぁ。</p>\n",
+  "preview": "",
+  "dir": "content/json",
+  "base": "2018-07-14-create-michinori.json",
+  "ext": ".json",
+  "sourceBase": "2018-07-14-create-michinori.md",
+  "sourceExt": ".md"
+}
