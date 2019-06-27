@@ -79,3 +79,7 @@ dist
 
 # IDE
 .idea
+
+.DS_Store
+
+/config/.env.*

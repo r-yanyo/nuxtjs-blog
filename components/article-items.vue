@@ -1,23 +1,24 @@
 <template>
   <div class="article">
-    <div class="article-item" v-for="content in contents" v-bind:key="content.base">
+    <div class="article-item" v-for="content in contents" v-bind:key="content.sys.id">
       <div class="article-head">
-        <time class="date">{{content.date}}</time>
+        <time class="date">{{content.fields.date}}</time>
         <h1>
-          <nuxt-link v-bind:to="content.base | link" class="article-title">{{ content.title }}</nuxt-link>
+          <nuxt-link v-bind:to="content | link" class="article-title">{{ content.fields.title }}</nuxt-link>
         </h1>
+        <h2>{{ content.fields.subtitle }}</h2>
         <div class="meta-info">
-          <!-- <ul class="tags">
-            <li class="tag" v-for="tag in content.tags" v-bind:key="tag">{{tag}}</li>
-          </ul>-->
+          <ul class="tags">
+            <li class="tag" v-for="tag in content.fields.tags" v-bind:key="tag">{{tag}}</li>
+          </ul>
         </div>
       </div>
-      <div class="content" v-html="content.bodyHtml"></div>
+      <div class="content" v-html="$options.filters.markdownIt(content.fields.content)"></div>
       <a
         href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw"
         class="twitter-hashtag-button"
         data-size="default"
-        v-bind:data-url="content.base | url"
+        v-bind:data-url="content | url"
         v-bind:data-text="content.title"
         data-show-count="false"
       >Tweet</a>
@@ -27,24 +28,21 @@
 </template>
 
 <script>
+const md = require('markdown-it')({
+  html: true
+}).use(require('markdown-it-highlightjs'))
+
 export default {
   props: ["contents"],
   filters: {
-    link(base) {
-      if (!base) return "";
-      base = base.replace(/\.json$/, "");
-      const split = base.split("-");
-      const date = split.slice(0, 3).join("-");
-      const slug = split.slice(3).join("-");
-      return `/posts/${date}/${slug}/`;
+    link(content) {
+    return `/posts/${content.fields.date}/${content.sys.id}/`
     },
-    url(base) {
-      if (!base) return "";
-      base = base.replace(/\.json$/, "");
-      const split = base.split("-");
-      const date = split.slice(0, 3).join("-");
-      const slug = split.slice(3).join("-");
-      return `https://r-yanyo.com/posts/${date}/${slug}/`;
+    url(content) {
+      return `/posts/${content.fields.date}/${content.sys.id}/`;
+    },
+    markdownIt(content){
+      return md.render(content)
     }
   }
 };

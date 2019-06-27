@@ -4,26 +4,14 @@
 
 <script>
 import articleItems from "~/components/article-items";
-import { fileMap } from "~/content/json/summary.json";
-import { sourceFileArray } from "~/content/json/summary.json";
+import client from "~/apis/contentful.js";
 
 export default {
-  asyncData() {
+  async asyncData() {
+    const entries = await client.getEntries()
     return {
-      contents: sourceFileArray
-        .slice()
-        .reverse()
-        .map((
-          sourceFile // use slice() to copy the array immutably
-        ) =>
-          Object.assign(
-            {},
-            require(`~/content/json/${sourceFile
-              .split("/")[2]
-              .replace(/\.md$/, ".json")}`)
-          )
-        )
-    };
+      contents: entries.items.sort( (a,b) => a.fields.date > b.fields.date ? -1 : 1)
+    }
   },
   head() {
     const title = `r-yanyoのブログ`;
@@ -33,6 +21,11 @@ export default {
       meta: [],
       link: [{ rel: "canonical", href: url }]
     };
+  },
+  filters: {
+    sortByDate(contents){
+      return contents.slice().sort( (a,b) => a.fields.date < b.fields.date)
+    }
   },
   components: {
     articleItems

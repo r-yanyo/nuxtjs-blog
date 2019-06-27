@@ -4,23 +4,18 @@
 
 <script>
 import articleItems from "~/components/article-items";
-import { sourceFileArray } from "~/content/json/summary.json";
+import client from "~/apis/contentful.js";
 
 export default {
-  validate({ params }) {
-    return sourceFileArray.includes(
-      `content/markdown/${params.date}-${params.slug}.md`
-    );
-  },
-  asyncData({ params }) {
-    return Object.assign(
-      { content: require(`~/content/json/${params.date}-${params.slug}.json`) },
-      params
-    );
+  async asyncData({ params }) {
+    const entry = await client.getEntry(params.id)
+    return {
+      content: entry
+    }
   },
   head() {
-    const title = `${this.content.title} - r-yanyoのブログ`;
-    const url = `https://r-yanyo.com/posts/${this.date}/${this.slug}/`;
+    const title = `${this.content.fields.title} - r-yanyoのブログ`;
+    const url = `https://r-yanyo.com/posts/${this.content.fields.date}/${this.content.fields.id}/`;
     return {
       title: title,
       meta: [
@@ -30,7 +25,6 @@ export default {
         {
           hid: "og:description",
           property: "og:description",
-          content: this.content.preview
         }
       ],
       link: [{ rel: "canonical", href: url }]
