@@ -1,29 +1,18 @@
 <template>
-  <div class="article">
-    <div class="article-item" v-for="content in contents" v-bind:key="content.sys.id">
-      <div class="article-head">
-        <time class="date">{{content.fields.date}}</time>
-        <h1>
-          <nuxt-link v-bind:to="content | link" class="article-title">{{ content.fields.title }}</nuxt-link>
-        </h1>
-        <h2 v-if="content.fields.subtitle" class="article-subtitle">{{ content.fields.subtitle }}</h2>
-        <div class="meta-info">
-          <ul class="tags">
-            <li class="tag" v-for="tag in content.fields.tags" v-bind:key="tag">{{tag}}</li>
-          </ul>
-        </div>
+  <div class="article-card">
+    <div class="article-head">
+      <time class="date">{{content.fields.date}}</time>
+      <h1>
+        <nuxt-link v-bind:to="content | link" class="article-title">{{ content.fields.title }}</nuxt-link>
+      </h1>
+      <h2 v-if="content.fields.subtitle" class="article-subtitle">{{ content.fields.subtitle }}</h2>
+      <div class="meta-info">
+        <ul class="tags">
+          <li class="tag" v-for="tag in content.fields.tags" v-bind:key="tag">{{tag}}</li>
+        </ul>
       </div>
-      <div class="content" v-html="$options.filters.markdownIt(content.fields.content)"></div>
-      <a
-        href="https://twitter.com/intent/tweet?ref_src=twsrc%5Etfw"
-        class="twitter-hashtag-button"
-        data-size="default"
-        v-bind:data-url="content | url"
-        v-bind:data-text="content.fields.title"
-        data-show-count="false"
-      >Tweet</a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </template>
 
@@ -33,13 +22,10 @@ const md = require('markdown-it')({
 }).use(require('markdown-it-highlightjs'))
 
 export default {
-  props: ["contents"],
+  props: ["content"],
   filters: {
     link(content) {
       return `/posts/${content.fields.date}/${content.sys.id}/`
-    },
-    url(content) {
-      return `https://r-yanyo.com/posts/${content.fields.date}/${content.sys.id}/`;
     },
     markdownIt(content){
       return md.render(content)
@@ -48,7 +34,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "highlight.js/styles/github.css";
 
 .article {
@@ -78,24 +64,25 @@ export default {
     max-width: 100%;
   }
 }
-.article-item {
+.article-card {
+  width: 33%;
   margin-bottom: 32px;
   background-color: white;
-  padding: 30px 100px;
+  padding: 30px;
 }
 .article-head {
   margin-bottom: 24px;
 }
 a.article-title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
   color: rgb(68, 62, 62);
   text-decoration: none;
 }
-.article-subtitle {
-  font-size: 1.3rem;
+.article-subtitle{
+  font-size: 1rem;
   display: block;
   font-weight: bold;
   color: rgb(68, 62, 62);
@@ -112,9 +99,11 @@ a.article-title {
 .tags {
   display: flex;
   align-items: center;
+  margin: 0;
   padding: 0;
   .tag {
     list-style: none;
+    font-size: 0.8rem;
     & + .tag {
       margin-left: 16px;
     }
@@ -125,16 +114,9 @@ a.article-title {
   a.article-title {
     font-size: 1.6rem;
   }
-  .article-item {
+  .article-card {
+    width: 100%;
     padding: 15px;
-  }
-  .content {
-    h1 {
-      font-size: 1.4rem;
-    }
-    h2 {
-      font-size: 1.2rem;
-    }
   }
   .meta-info {
     flex-wrap: wrap;

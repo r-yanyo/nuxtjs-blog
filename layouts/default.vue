@@ -28,12 +28,12 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  width: 960px;
+  width: 1200px;
   margin: auto;
   padding: 0 80px;
   min-height: 100vh;
 }
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .container {
     width: 100%;
     padding: 0 0;

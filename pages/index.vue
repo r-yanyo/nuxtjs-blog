@@ -1,9 +1,11 @@
 <template>
-  <article-items v-bind:contents="contents"></article-items>
+  <div class="article-cards">
+    <article-card v-for="content in contents" :key="content.sys.id" :content="content"></article-card>
+  </div>
 </template>
 
 <script>
-import articleItems from "~/components/article-items";
+import articleCard from "~/components/article-card";
 import client from "~/apis/contentful.js";
 
 export default {
@@ -28,14 +30,18 @@ export default {
     }
   },
   components: {
-    articleItems
+    articleCard
   }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "css/my-animation.scss";
 
+.article-cards{
+  display: flex;
+  flex-wrap: wrap;
+}
 .clickable {
   display: inline-block;
   transition: 0.2s linear;
