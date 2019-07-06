@@ -1,6 +1,7 @@
 const pkg = require('./package')
 
 import client from './apis/contentful.js'
+import config from './config/config.js'
 
 const generateDynamicRoutes = callback => {
   const routes = client.getEntries().then(contents =>
@@ -71,5 +72,10 @@ module.exports = {
 
   generate: {
     routes: generateDynamicRoutes
+  },
+
+  env: {
+    SPACE_ID: process.env['SPACE_ID'] || config['SPACE_ID'],
+    ACCESS_TOKEN: process.env['ACCESS_TOKEN'] || config['ACCESS_TOKEN']
   }
 }
