@@ -6,8 +6,6 @@
     <nuxt-link to="/profile">
       <img class="my-icon clickable" src="/images/ball.png" alt="アイコン画像">
     </nuxt-link>
-    <!-- profile
-    <nuxt-link to="/">aaa</nuxt-link>-->
   </header>
 </template>
 
