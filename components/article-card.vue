@@ -72,9 +72,6 @@ export default {
   margin-bottom: 32px;
   background-color: white;
   padding: 20px 20px;
-  border: 1px solid gray;
-  border-radius: 5%;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .article-head {
   margin-bottom: 24px;
@@ -115,7 +112,6 @@ a.article-title {
     }
   }
 }
-
 @media (max-width: 480px) {
   a.article-title {
     font-size: 1.6rem;
@@ -129,6 +125,14 @@ a.article-title {
   }
   .tags {
     padding-left: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .article-card {
+    border: 1px inset #8e7c7c61;
+    border-radius: 5%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   }
 }
 

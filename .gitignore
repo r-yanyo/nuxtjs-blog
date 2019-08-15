@@ -83,3 +83,5 @@ dist
 .DS_Store
 
 /config/.env.*
+
+setEnv.sh
