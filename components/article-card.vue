@@ -17,18 +17,18 @@
 </template>
 
 <script>
-const md = require('markdown-it')({
+const md = require("markdown-it")({
   html: true
-}).use(require('markdown-it-highlightjs'))
+}).use(require("markdown-it-highlightjs"));
 
 export default {
   props: ["content"],
   filters: {
     link(content) {
-      return `/posts/${content.fields.date}/${content.sys.id}/`
+      return `/posts/${content.fields.date}/${content.sys.id}/`;
     },
-    markdownIt(content){
-      return md.render(content)
+    markdownIt(content) {
+      return md.render(content);
     }
   }
 };
@@ -65,10 +65,16 @@ export default {
   }
 }
 .article-card {
-  width: 33%;
+  width: 30%;
+  &:not(:nth-child(3n)) {
+    margin-right: 10px;
+  }
   margin-bottom: 32px;
   background-color: white;
-  padding: 30px;
+  padding: 20px 20px;
+  border: 1px solid gray;
+  border-radius: 5%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .article-head {
   margin-bottom: 24px;
@@ -81,7 +87,7 @@ a.article-title {
   color: rgb(68, 62, 62);
   text-decoration: none;
 }
-.article-subtitle{
+.article-subtitle {
   font-size: 1rem;
   display: block;
   font-weight: bold;

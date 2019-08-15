@@ -10,10 +10,12 @@ import client from "~/apis/contentful.js";
 
 export default {
   async asyncData() {
-    const entries = await client.getEntries()
+    const entries = await client.getEntries();
     return {
-      contents: entries.items.sort( (a,b) => a.fields.date > b.fields.date ? -1 : 1)
-    }
+      contents: entries.items.sort((a, b) =>
+        a.fields.date > b.fields.date ? -1 : 1
+      )
+    };
   },
   head() {
     const title = `r-yanyoのブログ`;
@@ -25,8 +27,8 @@ export default {
     };
   },
   filters: {
-    sortByDate(contents){
-      return contents.slice().sort( (a,b) => a.fields.date < b.fields.date)
+    sortByDate(contents) {
+      return contents.slice().sort((a, b) => a.fields.date < b.fields.date);
     }
   },
   components: {
@@ -38,9 +40,10 @@ export default {
 <style lang="scss" scoped>
 @import "css/my-animation.scss";
 
-.article-cards{
+.article-cards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .clickable {
   display: inline-block;
