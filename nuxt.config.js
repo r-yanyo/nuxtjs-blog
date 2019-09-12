@@ -1,16 +1,16 @@
-const pkg = require('./package')
+const pkg = require('./package');
 
-import client from './apis/contentful.js'
-import config from './config/config.js'
+import client from './apis/contentful.js';
+import config from './config/config.js';
 
 const generateDynamicRoutes = callback => {
   const routes = client.getEntries().then(contents =>
     contents.items.map(content => {
-      return `/posts/${content.fields.date}/${content.sys.id}`
+      return `/posts/${content.fields.date}/${content.sys.id}`;
     })
-  )
-  callback(null, routes)
-}
+  );
+  callback(null, routes);
+};
 
 module.exports = {
   mode: 'universal',
@@ -53,7 +53,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~plugins/ga.js', ssr: false }],
 
   /*
    ** Nuxt.js modules
@@ -78,4 +78,4 @@ module.exports = {
     SPACE_ID: process.env['SPACE_ID'] || config['SPACE_ID'],
     ACCESS_TOKEN: process.env['ACCESS_TOKEN'] || config['ACCESS_TOKEN']
   }
-}
+};
