@@ -4,7 +4,7 @@
       <nuxt-link to="/" class="blog-title">r-yanyoのブログ</nuxt-link>
     </h1>
     <nuxt-link to="/profile">
-      <img class="my-icon clickable" src="/images/ball.png" alt="アイコン画像">
+      <img class="my-icon clickable" src="/images/ball.png" alt="アイコン画像" />
     </nuxt-link>
   </header>
 </template>

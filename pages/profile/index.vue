@@ -7,19 +7,20 @@
     <div id="content">
       <div class="wrapper">
         <section class="content-profile" id="top-content">
-          <a href="https://twitter.com/r_yanyo" target="_blank" id="image-link">
-            <img src="/images/ball.png" class="clickable">
+          <a href="https://twitter.com/r_yanyo" target="_blank" rel="noopener" id="image-link">
+            <img src="/images/ball.png" class="clickable" />
           </a>
           <div class="description">
             <div>
               <div class="clickable" id="twitter-link">
-                <a href="https://twitter.com/r_yanyo" target="_blank">@r_yanyo</a>
+                <a href="https://twitter.com/r_yanyo" target="_blank" rel="noopener">@r_yanyo</a>
               </div>
             </div>
+            <p>1996年生まれ</p>
             <p>頑張ってる途中</p>
           </div>
           <div class="center">
-            <div class="arrow arrow-down"/>
+            <div class="arrow arrow-down" />
           </div>
         </section>
       </div>
@@ -33,15 +34,14 @@
           </div>
           <!-- <ScrollAnimation animateIn="fadeIn"> -->
           <div id="skills" data-aos="flip-left">
-            <i class="devicon-html5-plain"/>
-            <i class="devicon-javascript-plain"/>
-            <i class="devicon-css3-plain"/>
-            <i class="devicon-nodejs-plain-wordmark"/>
-            <i class="devicon-express-original-wordmark"/>
-            <i class="devicon-vuejs-plain-wordmark"/>
-            <i class="devicon-react-original-wordmark"/>
-            <i class="devicon-rails-plain-wordmark"/>
-            <i class="devicon-python-plain-wordmark"/>
+            <i class="devicon-html5-plain" />
+            <i class="devicon-css3-plain" />
+            <i class="devicon-javascript-plain" />
+            <i class="devicon-nodejs-plain-wordmark" />
+            <i class="devicon-vuejs-plain-wordmark" />
+            <i class="devicon-angularjs-plain" />
+            <i class="devicon-rails-plain-wordmark" />
+            <i class="devicon-python-plain-wordmark" />
           </div>
           <!-- </ScrollAnimation> -->
         </section>
@@ -51,10 +51,16 @@
           <div class="heading">
             <h2>About Me</h2>
           </div>
-          <p>秋田高専 → 豊橋技科大</p>
           <p>Webエンジニアとして修行中。アルバイトをしていたり、趣味でアプリを作ったり。JavaScriptが好きです。</p>
-          <br>
-          <p>あと英語を話せるようにもなりたい、30歳ぐらいまでには。</p>
+          <br />
+          <div class="history">
+            <p>2017/04 豊橋技術科学大学 入学 Webプログラミングを始める</p>
+            <p>2017/09 コニカミノルタハッカソン 3位</p>
+            <p>2018/02~07 株式会社ウェブインパクト アルバイト</p>
+            <p>2018/08~ 株式会社TwoGate アルバイト</p>
+            <p>2019/01~02 株式会社Faber Company 実務訓練（インターンシップ）</p>
+            <p>2019/09 CA Tech Challenge AbemaTV Hack -クライアントサイド編- 優秀賞</p>
+          </div>
         </section>
       </div>
       <div class="wrapper wrapper-blue">
@@ -63,17 +69,51 @@
             <h2>WORKS</h2>
           </div>
           <div class="description">
-            <p>Herokuの無料枠に上げているのでロードが長く、落ちている可能性大です。いつか改善したい（いつか）。</p>
+            <p>今まで作ったものです。</p>
           </div>
           <!-- <ScrollAnimation animateIn="slideInRight"> -->
           <div id="works">
             <div class="work">
-              <img src="/images/instagramanai.png">
-              <a href="https://onsen-ui.herokuapp.com/" target="_blank">Instagramanai</a>
+              <div class="work-left">
+                <img src="/images/michinori.png" />
+                <a href="https://michinori.herokuapp.com/" target="_blank" rel="noopener">Michinori</a>
+              </div>
+              <div class="work-right">
+                <p>頑張った経験をシェアするサービスです。Vue.jsとRuby on Railsで作成しました。</p>
+              </div>
             </div>
             <div class="work">
-              <img src="/images/michinori.png">
-              <a href="https://michinori.herokuapp.com/" target="_blank">Michinori</a>
+              <div class="work-left">
+                <img src="/images/instagramanai.png" />
+                <a
+                  href="https://onsen-ui.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener"
+                >Instagramanai</a>
+              </div>
+              <div class="work-right">
+                <p>Vue.jsのモバイル向けフレームワークであるOnsenUIで作りました。デザインの練習で作成しました。（Herokuに上げているので起動が遅いです。）</p>
+              </div>
+            </div>
+            <div class="work">
+              <div class="work-left">
+                <img src="/images/tutAddCalendarFromGmail.png" width="190px" />
+                <a
+                  href="http://yanyo.html.xdomain.jp/"
+                  target="_blank"
+                  rel="noopener"
+                >tutAddCalendarFromGmail</a>
+              </div>
+              <div
+                class="work-right"
+              >豊橋技科大の補講・休講・教室変更情報をGmailからGoogleCalendarに自動追加するGoogleAppsScriptです。</div>
+            </div>
+            <div class="work">
+              <div class="work-left">
+                <img src="/images/kusogame.png" width="190px" />
+                <a href="http://yanyo.html.xdomain.jp/" target="_blank" rel="noopener">くそゲー倉庫</a>
+              </div>
+              <div class="work-right">Game a weekで作ったゲームです。開発にはGameMakerを使用しました。スマホだと動かないです。</div>
             </div>
           </div>
           <!-- </ScrollAnimation> -->
@@ -190,7 +230,8 @@ header {
   margin: 30px;
 }
 .work {
-  margin: 0 25px;
+  display: flex;
+  margin-top: 16px;
 }
 #work-content {
   p,
@@ -198,15 +239,17 @@ header {
     color: white;
   }
 }
-#works {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
+.work-left {
+  margin-right: 12px;
+}
+.work-right {
 }
 #works p,
 a {
   display: block;
+}
+.history {
+  text-align: left;
 }
 </style>
 
