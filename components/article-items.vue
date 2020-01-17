@@ -28,21 +28,25 @@
 </template>
 
 <script>
-const md = require('markdown-it')({
+const md = require("markdown-it")({
   html: true
-}).use(require('markdown-it-highlightjs'))
+}).use(require("markdown-it-highlightjs"));
 
 export default {
   props: ["contents"],
   filters: {
     link(content) {
-      return `/posts/${content.fields.date}/${content.sys.id}/`
+      return `/posts/${
+        content.fields.date
+      }/${content.sys.id.toLowerCase()}?id=${content.sys.id}`;
     },
     url(content) {
-      return `https://r-yanyo.com/posts/${content.fields.date}/${content.sys.id}/`;
+      return `https://r-yanyo.com/posts/${
+        content.fields.date
+      }/${content.sys.id.toLowerCase()}?id="${content.sys.id}`;
     },
-    markdownIt(content){
-      return md.render(content)
+    markdownIt(content) {
+      return md.render(content);
     }
   }
 };
