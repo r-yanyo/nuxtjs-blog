@@ -1,22 +1,18 @@
 # nuxt-blog
+プロフィールページもあります。
 
-> nuxt-blog
+## 使用技術
+- Nuxt.js
+- Contentful
+- Netlify
 
-## Build Setup
+nuxt generateで各ブログ記事をSPA+staticなページで作成。
 
-``` bash
-# install dependencies
-$ yarn install
+## 工夫した点
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+### レスポンシブデザイン
+どんなデバイスで見てもデザインが崩れないように。
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+### パフォーマンス改善
+Lighthouse
+<img width="1440" alt="Screen Shot 2020-01-17 at 14 22 17" src="https://user-images.githubusercontent.com/6813556/72594624-2ee03f00-394b-11ea-9b70-b21c65802afd.png">
