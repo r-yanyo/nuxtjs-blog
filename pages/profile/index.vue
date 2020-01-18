@@ -115,6 +115,13 @@
               </div>
               <div class="work-right">Game a weekで作ったゲームです。開発にはGameMakerを使用しました。スマホだと動かないです。</div>
             </div>
+            <div class="work">
+              <div class="work-left">
+                <img src="/images/notes.png" width="190px" />
+                <a href="https://notes-ba3c8.web.app/" target="_blank" rel="noopener">notes2</a>
+              </div>
+              <div class="work-right">Mac標準のNotesをあらゆるデバイスで使いたい。PWAで作ることで実現。</div>
+            </div>
           </div>
           <!-- </ScrollAnimation> -->
         </section>
@@ -243,6 +250,7 @@ header {
   margin-right: 12px;
 }
 .work-right {
+  text-align: left;
 }
 #works p,
 a {
