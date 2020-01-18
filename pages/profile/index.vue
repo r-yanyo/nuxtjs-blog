@@ -200,7 +200,6 @@ header {
 }
 .wrapper {
   width: 100%;
-  text-align: center;
   background-color: white;
 }
 .wrapper-blue {
@@ -229,6 +228,7 @@ header {
 }
 #top-content {
   padding: 50px 0 30px 0;
+  text-align: center;
 }
 #top-content img {
   max-width: 150px;
@@ -274,9 +274,9 @@ header {
 }
 .work-left {
   margin-right: 12px;
+  text-align: center;
 }
 .work-right {
-  text-align: left;
 }
 #works p,
 a {
@@ -284,6 +284,12 @@ a {
 }
 .history {
   text-align: left;
+}
+
+@media (max-width: 480px) {
+  .work {
+    flex-direction: column;
+  }
 }
 </style>
 
