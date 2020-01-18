@@ -79,6 +79,12 @@
                 <a href="https://michinori.herokuapp.com/" target="_blank" rel="noopener">Michinori</a>
               </div>
               <div class="work-right">
+                <p>
+                  GitHub:
+                  <a
+                    href="https://github.com/r-yanyo/michinori"
+                  >https://github.com/r-yanyo/michinori</a>
+                </p>
                 <p>頑張った経験をシェアするサービスです。Vue.jsとRuby on Railsで作成しました。</p>
               </div>
             </div>
@@ -92,6 +98,12 @@
                 >Instagramanai</a>
               </div>
               <div class="work-right">
+                <p>
+                  GitHub
+                  <a
+                    href="https://github.com/r-yanyo/onsen-ui"
+                  >https://github.com/r-yanyo/onsen-ui</a>
+                </p>
                 <p>Vue.jsのモバイル向けフレームワークであるOnsenUIで作りました。デザインの練習で作成しました。（Herokuに上げているので起動が遅いです。）</p>
               </div>
             </div>
@@ -104,23 +116,37 @@
                   rel="noopener"
                 >tutAddCalendarFromGmail</a>
               </div>
-              <div
-                class="work-right"
-              >豊橋技科大の補講・休講・教室変更情報をGmailからGoogleCalendarに自動追加するGoogleAppsScriptです。</div>
+              <div class="work-right">
+                <p>
+                  Github:
+                  <a
+                    href="https://github.com/r-yanyo/tutAddCalendarFromGmail"
+                  >https://github.com/r-yanyo/tutAddCalendarFromGmail</a>
+                </p>
+                <p>豊橋技科大の補講・休講・教室変更情報をGmailからGoogleCalendarに自動追加するGoogleAppsScriptです。</p>
+              </div>
             </div>
             <div class="work">
               <div class="work-left">
                 <img src="/images/kusogame.png" width="190px" />
                 <a href="http://yanyo.html.xdomain.jp/" target="_blank" rel="noopener">くそゲー倉庫</a>
               </div>
-              <div class="work-right">Game a weekで作ったゲームです。開発にはGameMakerを使用しました。スマホだと動かないです。</div>
+              <div class="work-right">
+                <p>Game a weekで作ったゲームです。開発にはGameMakerを使用しました。スマホだと動かないです。</p>
+              </div>
             </div>
             <div class="work">
               <div class="work-left">
                 <img src="/images/notes.png" width="190px" />
                 <a href="https://notes-ba3c8.web.app/" target="_blank" rel="noopener">notes2</a>
               </div>
-              <div class="work-right">Mac標準のNotesをあらゆるデバイスで使いたい。PWAで作ることで実現。</div>
+              <div class="work-right">
+                <p>
+                  Github:
+                  <a href="https://github.com/r-yanyo/notes">https://github.com/r-yanyo/notes</a>
+                </p>
+                <p>標準のNotesをあらゆるデバイスで使いたい。PWAで作ることで実現。</p>
+              </div>
             </div>
           </div>
           <!-- </ScrollAnimation> -->
