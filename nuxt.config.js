@@ -6,9 +6,12 @@ import config from "./config/config.js";
 const generateDynamicRoutes = callback => {
   const routes = client.getEntries().then(contents =>
     contents.items.map(content => {
-      return `/posts/${
-        content.fields.date
-      }/${content.sys.id.toLocaleLowerCase()}`;
+      return {
+        route: `/posts/${
+          content.fields.date
+        }/${content.sys.id.toLocaleLowerCase()}/`,
+        payload: content
+      };
     })
   );
   callback(null, routes);

@@ -1,10 +1,6 @@
 <template>
   <div class="article-cards">
-    <article-card
-      v-for="content in contents"
-      :key="content.sys.id.toLowerCase()"
-      :content="content"
-    ></article-card>
+    <article-card v-for="content in contents" :key="content.sys.id" :content="content"></article-card>
   </div>
 </template>
 

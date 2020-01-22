@@ -36,14 +36,10 @@ export default {
   props: ["contents"],
   filters: {
     link(content) {
-      return `/posts/${
-        content.fields.date
-      }/${content.sys.id.toLowerCase()}?id=${content.sys.id}`;
+      return `/posts/${content.fields.date}/${content.sys.id}`;
     },
     url(content) {
-      return `https://r-yanyo.com/posts/${
-        content.fields.date
-      }/${content.sys.id.toLowerCase()}?id="${content.sys.id}`;
+      return `https://r-yanyo.com/posts/${content.fields.date}/${content.sys.id}`;
     },
     markdownIt(content) {
       return md.render(content);

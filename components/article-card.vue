@@ -25,9 +25,7 @@ export default {
   props: ["content"],
   filters: {
     link(content) {
-      return `/posts/${
-        content.fields.date
-      }/${content.sys.id.toLowerCase()}?id=${content.sys.id}`;
+      return `/posts/${content.fields.date}/${content.sys.id}/`;
     },
     markdownIt(content) {
       return md.render(content);

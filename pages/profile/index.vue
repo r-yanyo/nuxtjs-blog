@@ -30,7 +30,7 @@
             <h2>SKILLS</h2>
           </div>
           <div class="description">
-            <p>Webアプリを一人で作れるようになるために、フロントエンドもバックエンドも勉強中。どっちかというとフロント寄りに興味がある。</p>
+            <p>Webアプリを一人で作れるようになるために、フロントエンドもバックエンドも勉強中。UI/UXの改善に興味がある。</p>
           </div>
           <!-- <ScrollAnimation animateIn="fadeIn"> -->
           <div id="skills" data-aos="flip-left">

@@ -7,17 +7,16 @@ import articleItems from "~/components/article-items";
 import client from "~/apis/contentful.js";
 
 export default {
-  async asyncData({ params, query }) {
-    const entry = await client.getEntry(query.id);
+  async asyncData({ params, payload }) {
+    const id = payload ? payload.sys.id : params.id;
+    const entry = await client.getEntry(id);
     return {
       content: entry
     };
   },
   head() {
     const title = `${this.content.fields.title} - r-yanyoのブログ`;
-    const url = `https://r-yanyo.com/posts/${
-      this.content.fields.date
-    }/${this.content.sys.id.toLowerCase()}?id=${this.content.sys.id}`;
+    const url = `https://r-yanyo.com/posts/${this.content.fields.date}/${this.content.sys.id}`;
     return {
       title: title,
       meta: [
