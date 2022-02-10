@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "node": "^11.2.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.11.0",
     "processmd": "^4.4.0",
     "sass-loader": "^7.1.0"
