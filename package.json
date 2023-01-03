@@ -16,7 +16,7 @@
     "highlight.js": "^9.13.1",
     "markdown-it": "^8.4.2",
     "markdown-it-highlightjs": "^3.0.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "node": "^11.2.0",
